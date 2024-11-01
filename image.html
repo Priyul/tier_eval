@@ -6,12 +6,12 @@
     google.charts.setOnLoadCallback(drawReviewChart);
     function drawReviewChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Employee', 'Very Dissatisfied', 'Dissatisfied', 'Neutral', 'Satisfied', 'Very Satisfied', {role: 'annotation'}],
-            ['Tania Move', 2, 3, 1, 0, 0, ''],
-            ['Jake Mthembu', 0, 1, 1, 3, 1, ''],
-            ['Joao Felix', 0, 0, 0, 1, 2, ''],
-            ['Calvyn Swart', 1, 2, 1, 0, 0, ''],
-            ['Steven van Heerden', 0, 0, 0, 2, 2, '']
+        ['Employee', 'Very Dissatisfied', 'Dissatisfied', 'Neutral', 'Satisfied', 'Very Satisfied', {role: 'annotation'}],
+        ['Tania', 2, 3, 1, 4, 1, ''],
+        ['Jake', 0, 1, 1, 3, 3, ''],
+        ['Calvyn', 2, 2, 1, 1, 0, ''],
+        ['Steven', 1, 1, 0, 3, 2, ''],
+        ['Joao', 0, 0, 1, 4, 3, '']
         ]);
         var options = {
             title: 'Employee Review Scores',
@@ -20,7 +20,7 @@
             legend: { position: 'top', maxLines: 3 },
             bar: { groupWidth: '75%' },
             isStacked: true,
-            hAxis: { title: 'Number of Feedback received', minValue: 0, maxValue: 15 },
+            hAxis: { title: 'Number of Reviews received', minValue: 0, maxValue: 15 },
             vAxis: { title: 'Employees' }
         };
         var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
